@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row"> 
+        <ng-container *ngIf="selecteddata.length==0 then noSelected else selected"  ></ng-container>
+
+        <ng-template #noSelected  >
+            <p>No Events Selected, Please Select an event</p>
+        </ng-template>
+        <ng-template #selected>
+            <div class="details">
+                <h2>{{selecteddata.name}}</h2>
+                <p><span>id: {{selecteddata.id}}</span>
+                    
+                </p>
+                <p> author -- {{selecteddata.author}}</p>
+                <p> Created By -- {{selecteddata.createdBy}}</p>
+                <p> Location -- {{selecteddata.locationAddress}}</p>
+                <p> routingURL -- {{selecteddata.routingURL}}</p>
+                <p> secureCode -- {{selecteddata.secureCode}}</p>
+                
+
+            </div>
+        </ng-template>
+    </div>
+</div>

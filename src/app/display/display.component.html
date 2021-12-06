@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row" *ngFor="let event of events$ | async " >
+       <ul>
+           <li (click)="onSelectingEvent(event)" > 
+               <h2>{{event.name}}</h2>
+           </li>
+       </ul>
+    </div>
+</div>
